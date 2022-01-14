@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:padding="10dp">
+
+    <TextView
+        android:id="@+id/settingList"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textStyle="bold"
+        android:autoSizeMinTextSize="20sp"
+        android:gravity="center"
+        android:layout_margin="3pt"
+        android:padding="6sp"
+        android:textColor="@color/bg_tab_text_color"
+        android:background="@color/bg_tab_color"
+        android:drawable="@drawable/border"
+        android:textSize="20sp"/>
+
+</LinearLayout>

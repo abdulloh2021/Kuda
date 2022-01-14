@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="birmud">#BAEFFA</color>
+    <color name="navy">#108AC4</color>
+    <color name="whitey">#F9F7F7</color>
+    <color name="abu">#DBE2EF</color>
+    <color name="biru">#3F72AF</color>
+    <color name="birtu">#3F72AF</color>
+    <color name="back_bot_nav">#F9F7F7</color>
+    <color name="text_bot_nav_disable">#0d4854</color>
+    <color name="text_bot_nav_active">#108AC4</color>
+</resources>

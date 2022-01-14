@@ -1,0 +1,31 @@
+<resources>
+    <string name="app_name">Kuda</string>
+    <string name="user_name">Username</string>
+    <string name="password">Password</string>
+    <string name="email">Email</string>
+    <string name="confirm_pass">Confirm Password</string>
+    <string name="about_user_tab">About Me</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="title_activity_user_profile">UserProfile</string>
+    <string name="tab_text_1">About Me</string>
+    <string name="tab_text_2">Projects</string>
+    <string name="tab_text_3">History</string>
+    <string name="bullet"></string>
+    <string-array name="funded">
+        <item>Penerjemah Bahasa</item>
+        <item>Oplas Instant</item>
+        <item>Pintu Kemana-mana</item>
+    </string-array>
+    <string-array name="loved">
+        <item>Srimulat</item>
+        <item>Voice Amp</item>
+        <item>Virtual Salon</item>
+    </string-array>
+    <string name="please">"Please Don't Go~"</string>
+    <string name="if_go">"If you delete your account, please be reminded this action cannot be undone, and:"</string>
+    <string name="bbrp_dt">"Beberapa data masih tersimpan untuk kepentingan bisnis"</string>
+    <string name="del1">"Data pada profil terhapus"</string>
+    <string name="del2">"Email dan password terhapus"</string>
+    <string name="del3">"Notifikasi dan email berita dihentikan"</string>
+
+</resources>
