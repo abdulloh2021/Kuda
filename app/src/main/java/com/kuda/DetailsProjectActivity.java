@@ -6,7 +6,9 @@ import androidx.viewpager.widget.ViewPager;
 
 import android.graphics.Color;
 import android.os.Bundle;
+import android.text.method.LinkMovementMethod;
 import android.view.MenuItem;
+import android.view.TextureView;
 import android.widget.ProgressBar;
 import android.widget.TextView;
 
@@ -42,7 +44,14 @@ public class DetailsProjectActivity extends AppCompatActivity {
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbarDet);
         setSupportActionBar(toolbar);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-        getSupportActionBar().setDisplayShowTitleEnabled(false);
+        getSupportActionBar().setDisplayShowTitleEnabled(true);
+
+        TextView linkFAQ = findViewById(R.id.faq);
+        linkFAQ.setMovementMethod(LinkMovementMethod.getInstance());
+        TextView linkToU = findViewById(R.id.tou);
+        linkToU.setMovementMethod(LinkMovementMethod.getInstance());
+        TextView linkPrivacy = findViewById(R.id.privacy);
+        linkPrivacy.setMovementMethod(LinkMovementMethod.getInstance());
 
         targetDana = 100;
         danaMasuk = 30;

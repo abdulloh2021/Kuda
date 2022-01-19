@@ -13,22 +13,65 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="?attr/colorPrimary"
-        android:minHeight="?attr/actionBarSize" />
+        android:minHeight="?attr/actionBarSize">
 
-    <TextView
-        android:id="@+id/Title"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignBottom="@+id/toolbarDet"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentEnd="true"
-        android:layout_centerHorizontal="true"
-        android:gravity="center"
-        android:text="Details Project"
-        android:textColor="#ffff"
-        android:textSize="25sp"
-        android:textStyle="bold" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:weightSum="10"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/Title"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="Details Project"
+                android:gravity="center_vertical"
+                android:textColor="#FFFFFF"
+                android:textSize="25sp"
+                android:layout_weight="4"
+                android:textStyle="bold" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginRight="8sp"
+                android:layout_weight="6"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/faq"
+                    android:layout_marginBottom="2sp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/faq"
+                    android:textSize="10sp"
+                    android:textColorLink="@color/whitey"
+                    android:layout_gravity="end"/>
+
+                <TextView
+                    android:id="@+id/tou"
+                    android:layout_marginBottom="2sp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/tou"
+                    android:textSize="10sp"
+                    android:textColorLink="@color/whitey"
+                    android:layout_gravity="end"/>
+
+                <TextView
+                    android:id="@+id/privacy"
+                    android:layout_marginTop="2sp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/privacy"
+                    android:textSize="10sp"
+                    android:textColorLink="@color/whitey"
+                    android:layout_gravity="end"/>
+
+            </LinearLayout>
+        </LinearLayout>
+    </androidx.appcompat.widget.Toolbar>
 
     <com.google.android.material.appbar.AppBarLayout
         android:id="@+id/barLayout"
@@ -67,7 +110,8 @@
                 android:layout_height="wrap_content"
                 android:layout_below="@id/titleProject"
                 android:layout_centerHorizontal="true"
-                android:background="@drawable/aquaman" />
+                android:background="@drawable/aquaman"
+                android:scaleType="centerInside" />
 
             <TextView
                 android:id="@+id/maker"
@@ -76,7 +120,7 @@
                 android:layout_below="@id/projectMedia"
                 android:layout_centerHorizontal="true"
                 android:text="By: Bajuri"
-                android:textSize="14sp"/>
+                android:textSize="14sp" />
 
             <RelativeLayout
                 android:id="@+id/contProgress"
@@ -111,7 +155,7 @@
                         android:layout_height="wrap_content"
                         android:layout_centerHorizontal="true"
                         android:layout_centerVertical="true"
-                        android:padding="1sp"
+                        android:padding="5pt"
                         android:textSize="14sp"
                         android:textStyle="bold" />
                 </RelativeLayout>
@@ -213,20 +257,20 @@
         android:id="@+id/vp_details_project"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@id/barLayout"
         android:layout_above="@id/addToList"
+        android:layout_below="@id/barLayout"
         android:layout_centerHorizontal="true" />
 
     <TextView
         android:id="@+id/addToList"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_above="@id/fundThis"
+        android:layout_centerHorizontal="true"
         android:layout_marginStart="3pt"
         android:layout_marginTop="3pt"
         android:layout_marginEnd="3pt"
         android:layout_marginBottom="3pt"
-        android:layout_above="@id/fundThis"
-        android:layout_centerHorizontal="true"
         android:text="Add to Loved"
         android:textColor="#000000"
         android:textSize="20sp"
@@ -241,7 +285,7 @@
         android:layout_alignParentBottom="true"
         android:layout_margin="5pt"
         android:background="@drawable/border"
-        android:textColor="@color/bg_tab_text_color"
-        android:text="Fund This Project" />
+        android:text="Fund This Project"
+        android:textColor="@color/bg_tab_text_color" />
 
 </RelativeLayout>

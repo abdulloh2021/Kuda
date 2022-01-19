@@ -50,4 +50,7 @@
     </string-array>
     <string name="projectDesc">"This project need a fund, please hurry up funding this project. very very very important"</string>
     <string name="projectProgg">"This project still need to waiting fully funded"</string>
+    <string name="faq"><a href="https://en.wikipedia.org/wiki/FAQ">FAQ</a></string>
+    <string name="tou"><a href="https://www.termsfeed.com/blog/sample-terms-of-use-template/">Terms of Use</a></string>
+    <string name="privacy"><a href="https://twitter.com/en/privacy">Privacy Policy</a></string>
 </resources>
