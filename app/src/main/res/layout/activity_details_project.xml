@@ -1,0 +1,247 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/back_blue"
+    android:orientation="vertical"
+    tools:context="com.kuda.DetailsProjectActivity">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbarDet"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="?attr/colorPrimary"
+        android:minHeight="?attr/actionBarSize" />
+
+    <TextView
+        android:id="@+id/Title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/toolbarDet"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_centerHorizontal="true"
+        android:gravity="center"
+        android:text="Details Project"
+        android:textColor="#ffff"
+        android:textSize="25sp"
+        android:textStyle="bold" />
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/barLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/toolbarDet"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:background="#46F9F7F7">
+
+        <RelativeLayout
+            android:id="@+id/cont1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/toolbar">
+
+            <TextView
+                android:id="@+id/titleProject"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginStart="3pt"
+                android:layout_marginTop="3pt"
+                android:layout_marginEnd="3pt"
+                android:layout_marginBottom="3pt"
+                android:gravity="center"
+                android:text="Judul Project"
+                android:textColor="#000000"
+                android:textSize="28sp"
+                android:textStyle="bold" />
+
+            <ImageView
+                android:id="@+id/projectMedia"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/titleProject"
+                android:layout_centerHorizontal="true"
+                android:background="@drawable/aquaman" />
+
+            <TextView
+                android:id="@+id/maker"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/projectMedia"
+                android:layout_centerHorizontal="true"
+                android:text="By: Bajuri"
+                android:textSize="14sp"/>
+
+            <RelativeLayout
+                android:id="@+id/contProgress"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/maker"
+                android:layout_marginStart="3pt"
+                android:layout_marginTop="3pt"
+                android:layout_marginEnd="3pt"
+                android:layout_marginBottom="3pt">
+
+                <RelativeLayout
+                    android:id="@+id/container"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <ProgressBar
+                        android:id="@+id/progress"
+                        style="?android:attr/progressBarStyleHorizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentTop="true"
+                        android:layout_centerInParent="true"
+                        android:layout_marginStart="5pt"
+                        android:layout_marginTop="5pt"
+                        android:layout_marginEnd="5pt"
+                        android:layout_marginBottom="5pt" />
+
+                    <TextView
+                        android:id="@+id/progressStatus"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:layout_centerVertical="true"
+                        android:padding="1sp"
+                        android:textSize="14sp"
+                        android:textStyle="bold" />
+                </RelativeLayout>
+
+                <TextView
+                    android:id="@+id/danaMasuk"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/container"
+                    android:layout_alignParentStart="true"
+                    android:layout_marginLeft="4pt"
+                    android:textColor="#000000"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:id="@+id/of"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/container"
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerVertical="true"
+                    android:text="of"
+                    android:textColor="#6C6C6C"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:id="@+id/targetDana"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/container"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginRight="4pt"
+                    android:textColor="#000000"
+                    android:textSize="18sp" />
+
+                <ImageView
+                    android:id="@+id/peopleIcon"
+                    android:layout_width="20sp"
+                    android:layout_height="20sp"
+                    android:layout_below="@id/danaMasuk"
+                    android:layout_alignParentStart="true"
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="4pt"
+                    android:layout_marginTop="3pt"
+                    android:background="@drawable/people" />
+
+                <TextView
+                    android:id="@+id/jumlahPendana"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/danaMasuk"
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginTop="3pt"
+                    android:layout_toRightOf="@id/peopleIcon"
+                    android:text="10"
+                    android:textColor="#000000"
+                    android:textSize="18sp" />
+
+                <ImageView
+                    android:id="@+id/calendarIcon"
+                    android:layout_width="20sp"
+                    android:layout_height="20sp"
+                    android:layout_below="@id/targetDana"
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginTop="3pt"
+                    android:layout_toLeftOf="@id/tenggatWaktu"
+                    android:background="@drawable/calendar" />
+
+                <TextView
+                    android:id="@+id/tenggatWaktu"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/danaMasuk"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginTop="3pt"
+                    android:layout_marginRight="4pt"
+                    android:text="10/July/2022"
+                    android:textColor="#000000"
+                    android:textSize="18sp" />
+
+            </RelativeLayout>
+        </RelativeLayout>
+
+        <com.google.android.material.tabs.TabLayout
+            android:id="@+id/tabs"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/cnt"
+            android:layout_centerHorizontal="true"
+            tools:ignore="SpeakableTextPresentCheck" />
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <androidx.viewpager.widget.ViewPager
+        android:id="@+id/vp_details_project"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/barLayout"
+        android:layout_above="@id/addToList"
+        android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:id="@+id/addToList"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="3pt"
+        android:layout_marginTop="3pt"
+        android:layout_marginEnd="3pt"
+        android:layout_marginBottom="3pt"
+        android:layout_above="@id/fundThis"
+        android:layout_centerHorizontal="true"
+        android:text="Add to Loved"
+        android:textColor="#000000"
+        android:textSize="20sp"
+        android:textStyle="bold" />
+
+    <Button
+        android:id="@+id/fundThis"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_margin="5pt"
+        android:background="@drawable/border"
+        android:textColor="@color/bg_tab_text_color"
+        android:text="Fund This Project" />
+
+</RelativeLayout>

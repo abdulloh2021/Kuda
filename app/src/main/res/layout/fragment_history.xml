@@ -7,7 +7,7 @@
     android:layout_height="match_parent"
     android:orientation="horizontal"
     android:padding="16sp"
-    tools:context=".ui.main.HistoryFragment">
+    tools:context=".fragment.HistoryFragment">
 
     <LinearLayout
         android:layout_width="200dp"

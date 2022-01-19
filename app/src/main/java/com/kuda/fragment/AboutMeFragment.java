@@ -1,4 +1,4 @@
-package com.kuda.ui.main;
+package com.kuda.fragment;
 
 import android.os.Bundle;
 
@@ -10,9 +10,9 @@ import android.view.ViewGroup;
 
 import com.kuda.R;
 
-public class HistoryFragment extends Fragment {
+public class AboutMeFragment extends Fragment   {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        return inflater.inflate(R.layout.fragment_history, container, false);
+        return inflater.inflate(R.layout.fragment_about_me, container, false);
     }
 }

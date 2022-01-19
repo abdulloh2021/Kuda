@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/back_blue"
+    android:orientation="vertical"
+    tools:context="com.kuda.SettingBankAccountActivity">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="?attr/colorPrimary"
+        android:minHeight="?attr/actionBarSize" />
+
+    <TextView
+        android:id="@+id/Title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/toolbar"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_centerHorizontal="true"
+        android:gravity="center"
+        android:text="Bank Account"
+        android:textColor="#ffff"
+        android:textSize="18sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/bankTr"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/toolbar"
+        android:layout_marginStart="5pt"
+        android:layout_marginTop="5pt"
+        android:layout_marginEnd="5pt"
+        android:layout_marginBottom="5pt"
+        android:text="List Bank"
+        android:textColor="#000000"
+        android:textSize="18sp"
+        android:textStyle="bold" />
+
+    <ListView
+        android:id="@+id/listBank"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/bankTr"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="5pt"
+        android:layout_marginEnd="5pt"
+        android:layout_marginBottom="5pt" />
+
+    <TextView
+        android:id="@+id/addBank"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="5pt"
+        android:text="Add Bank Account"
+        android:layout_below="@id/listBank"
+        android:textColor="#000000"
+        android:textSize="18sp"
+        android:textStyle="bold" />
+
+    <RelativeLayout
+        android:id="@+id/cont1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/addBank"
+        android:layout_marginStart="5pt"
+        android:layout_marginEnd="5pt"
+        android:layout_marginBottom="5pt">
+
+        <TextView
+            android:id="@+id/bankName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_gravity="center_vertical"
+            android:layout_marginStart="3sp"
+            android:layout_marginTop="3sp"
+            android:layout_marginEnd="3sp"
+            android:layout_marginBottom="3sp"
+            android:text="Bank Name"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <EditText
+            android:id="@+id/editBankName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/bankName"
+            android:layout_alignParentEnd="true"
+            android:padding="8sp"
+            android:layout_marginStart="3sp"
+            android:layout_marginTop="3sp"
+            android:layout_marginEnd="3sp"
+            android:layout_marginBottom="3sp"
+            android:background="@drawable/border"
+            android:ems="10"
+            android:gravity="start"
+            android:hint="Bank Name"
+            android:inputType="textPersonName" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/cont2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/cont1"
+        android:layout_marginStart="5pt"
+        android:layout_marginEnd="5pt"
+        android:layout_marginBottom="5pt">
+
+        <TextView
+            android:id="@+id/accNum"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_gravity="center_vertical"
+            android:layout_marginStart="3sp"
+            android:layout_marginTop="3sp"
+            android:layout_marginEnd="3sp"
+            android:layout_marginBottom="3sp"
+            android:text="Account Number"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <EditText
+            android:id="@+id/editAccNum"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/accNum"
+            android:layout_alignParentEnd="true"
+            android:layout_marginStart="3sp"
+            android:layout_marginTop="3sp"
+            android:layout_marginEnd="3sp"
+            android:layout_marginBottom="3sp"
+            android:background="@drawable/border"
+            android:padding="8sp"
+            android:ems="10"
+            android:gravity="start"
+            android:hint="Number"
+            android:inputType="number" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/cont3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/cont2"
+        android:layout_marginStart="5pt"
+        android:layout_marginEnd="5pt"
+        android:layout_marginBottom="5pt">
+
+        <TextView
+            android:id="@+id/bookHolder"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_gravity="center_vertical"
+            android:layout_marginStart="3sp"
+            android:layout_marginTop="3sp"
+            android:layout_marginEnd="3sp"
+            android:layout_marginBottom="3sp"
+            android:text="Bookholder Name"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <EditText
+            android:id="@+id/editBookHold"
+            android:padding="8sp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/bookHolder"
+            android:layout_alignParentEnd="true"
+            android:layout_marginStart="3sp"
+            android:layout_marginTop="3sp"
+            android:layout_marginEnd="3sp"
+            android:layout_marginBottom="3sp"
+            android:background="@drawable/border"
+            android:ems="10"
+            android:gravity="start"
+            android:hint="Name"
+            android:inputType="number" />
+    </RelativeLayout>
+    <Button
+        android:id="@+id/saveButt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_margin="5pt"
+        android:onClick="onSave"
+        android:background="@drawable/border"
+        android:textColor="@color/bg_tab_text_color"
+        android:text="Save" />
+</RelativeLayout>

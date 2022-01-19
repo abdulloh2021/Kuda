@@ -10,7 +10,23 @@
     <string name="tab_text_1">About Me</string>
     <string name="tab_text_2">Projects</string>
     <string name="tab_text_3">History</string>
+    <string name="tab_text_4">Description</string>
+    <string name="tab_text_5">Progress</string>
+    <string name="tab_text_6">Comment</string>
     <string name="bullet"></string>
+    <string name="add_project">Create your project</string>
+    <string name="pro_name">Project Name</string>
+    <string name="pro_upload_pic">Upload Picture/ Video</string>
+    <string name="select_pic">Select Picture /Video (.jpg/.png/.mp4)</string>
+    <string name="btn_pic">Submit</string>
+    <string name="upload">upload</string>
+    <string name="portofolio_upload">Upload Portofolio</string>
+    <string name="portofolio_file">Select File Pdf</string>
+    <string name="summary">Summary</string>
+    <string name="category">Category</string>
+    <string name="dateline">Dateline</string>
+    <string name="fund_target">Fund Target</string>
+    <string name="term">I have read Term and Condition</string>
     <string-array name="funded">
         <item>Penerjemah Bahasa</item>
         <item>Oplas Instant</item>
@@ -27,5 +43,11 @@
     <string name="del1">"Data pada profil terhapus"</string>
     <string name="del2">"Email dan password terhapus"</string>
     <string name="del3">"Notifikasi dan email berita dihentikan"</string>
-
+    <string-array name="bank_transaksi">
+        <item>"BCA - Tessy WRH - 6165165"</item>
+        <item>"Mandiri - Tessy WRH - 6165165"</item>
+        <item>"Danamon - Tessy WRH - 6165165"</item>
+    </string-array>
+    <string name="projectDesc">"This project need a fund, please hurry up funding this project. very very very important"</string>
+    <string name="projectProgg">"This project still need to waiting fully funded"</string>
 </resources>

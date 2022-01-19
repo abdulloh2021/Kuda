@@ -3,6 +3,7 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/USER/AndroidStudioProjects/Kuda/app/src/main/res/drawable-v24/style_01.xml" value="0.1390625" />
         <entry key="..\:/Users/USER/AndroidStudioProjects/Kuda/app/src/main/res/drawable/back_grey.xml" value="0.17864583333333334" />
         <entry key="..\:/Users/USER/AndroidStudioProjects/Kuda/app/src/main/res/drawable/border.xml" value="0.1390625" />
         <entry key="..\:/Users/USER/AndroidStudioProjects/Kuda/app/src/main/res/drawable/border_about_user.xml" value="0.121875" />
@@ -10,27 +11,47 @@
         <entry key="..\:/Users/USER/AndroidStudioProjects/Kuda/app/src/main/res/drawable/ic_baseline_add.xml" value="0.190625" />
         <entry key="..\:/Users/USER/AndroidStudioProjects/Kuda/app/src/main/res/drawable/ic_baseline_home.xml" value="0.1" />
         <entry key="..\:/Users/USER/AndroidStudioProjects/Kuda/app/src/main/res/drawable/ic_baseline_payment.xml" value="0.1" />
+        <entry key="..\:/Users/USER/AndroidStudioProjects/Kuda/app/src/main/res/drawable/progress_bar.xml" value="0.19322916666666667" />
+        <entry key="..\:/Users/USER/AndroidStudioProjects/Kuda/app/src/main/res/drawable/progress_bar_failed.xml" value="0.140625" />
+        <entry key="..\:/Users/USER/AndroidStudioProjects/Kuda/app/src/main/res/drawable/progress_bar_funding.xml" value="0.140625" />
+        <entry key="..\:/Users/USER/AndroidStudioProjects/Kuda/app/src/main/res/drawable/progress_bar_success.xml" value="0.140625" />
         <entry key="..\:/Users/USER/AndroidStudioProjects/Kuda/app/src/main/res/drawable/switch_button.xml" value="0.1" />
         <entry key="..\:/Users/USER/AndroidStudioProjects/Kuda/app/src/main/res/drawable/switch_button_thumb.xml" value="0.1" />
+        <entry key="..\:/Users/USER/AndroidStudioProjects/Kuda/app/src/main/res/layout/activity_add_project.xml" value="0.3703125" />
+        <entry key="..\:/Users/USER/AndroidStudioProjects/Kuda/app/src/main/res/layout/activity_details_project.xml" value="0.22" />
+        <entry key="..\:/Users/USER/AndroidStudioProjects/Kuda/app/src/main/res/layout/activity_disbursement.xml" value="0.22" />
+        <entry key="..\:/Users/USER/AndroidStudioProjects/Kuda/app/src/main/res/layout/activity_list_tester.xml" value="0.20677083333333332" />
         <entry key="..\:/Users/USER/AndroidStudioProjects/Kuda/app/src/main/res/layout/activity_login.xml" value="0.18" />
         <entry key="..\:/Users/USER/AndroidStudioProjects/Kuda/app/src/main/res/layout/activity_loging.xml" value="0.3703125" />
-        <entry key="..\:/Users/USER/AndroidStudioProjects/Kuda/app/src/main/res/layout/activity_main.xml" value="0.25" />
+        <entry key="..\:/Users/USER/AndroidStudioProjects/Kuda/app/src/main/res/layout/activity_main.xml" value="0.22" />
         <entry key="..\:/Users/USER/AndroidStudioProjects/Kuda/app/src/main/res/layout/activity_setting_account.xml" value="0.33" />
+        <entry key="..\:/Users/USER/AndroidStudioProjects/Kuda/app/src/main/res/layout/activity_setting_bank_account.xml" value="0.3703125" />
         <entry key="..\:/Users/USER/AndroidStudioProjects/Kuda/app/src/main/res/layout/activity_setting_delete_acc.xml" value="0.2" />
+        <entry key="..\:/Users/USER/AndroidStudioProjects/Kuda/app/src/main/res/layout/activity_setting_edit_profile.xml" value="0.14" />
         <entry key="..\:/Users/USER/AndroidStudioProjects/Kuda/app/src/main/res/layout/activity_setting_notification.xml" value="0.22" />
-        <entry key="..\:/Users/USER/AndroidStudioProjects/Kuda/app/src/main/res/layout/activity_setting_payment.xml" value="0.22" />
-        <entry key="..\:/Users/USER/AndroidStudioProjects/Kuda/app/src/main/res/layout/activity_settings.xml" value="0.18" />
+        <entry key="..\:/Users/USER/AndroidStudioProjects/Kuda/app/src/main/res/layout/activity_setting_payment.xml" value="0.17355371900826447" />
+        <entry key="..\:/Users/USER/AndroidStudioProjects/Kuda/app/src/main/res/layout/activity_settings.xml" value="0.25" />
         <entry key="..\:/Users/USER/AndroidStudioProjects/Kuda/app/src/main/res/layout/activity_sign_up.xml" value="0.22" />
-        <entry key="..\:/Users/USER/AndroidStudioProjects/Kuda/app/src/main/res/layout/activity_test.xml" value="0.17447916666666666" />
+        <entry key="..\:/Users/USER/AndroidStudioProjects/Kuda/app/src/main/res/layout/activity_test.xml" value="0.18" />
+        <entry key="..\:/Users/USER/AndroidStudioProjects/Kuda/app/src/main/res/layout/activity_test_category.xml" value="0.1" />
+        <entry key="..\:/Users/USER/AndroidStudioProjects/Kuda/app/src/main/res/layout/activity_test_category_details.xml" value="0.1" />
+        <entry key="..\:/Users/USER/AndroidStudioProjects/Kuda/app/src/main/res/layout/activity_test_shape_cell.xml" value="0.1" />
         <entry key="..\:/Users/USER/AndroidStudioProjects/Kuda/app/src/main/res/layout/activity_user_profile.xml" value="0.15" />
         <entry key="..\:/Users/USER/AndroidStudioProjects/Kuda/app/src/main/res/layout/activity_user_profile_exp.xml" value="0.1" />
+        <entry key="..\:/Users/USER/AndroidStudioProjects/Kuda/app/src/main/res/layout/card_item.xml" value="0.3703125" />
         <entry key="..\:/Users/USER/AndroidStudioProjects/Kuda/app/src/main/res/layout/fragment_about_me.xml" value="0.22" />
         <entry key="..\:/Users/USER/AndroidStudioProjects/Kuda/app/src/main/res/layout/fragment_about_me_exp.xml" value="0.1" />
+        <entry key="..\:/Users/USER/AndroidStudioProjects/Kuda/app/src/main/res/layout/fragment_details_project.xml" value="0.109375" />
+        <entry key="..\:/Users/USER/AndroidStudioProjects/Kuda/app/src/main/res/layout/fragment_details_project_comment.xml" value="0.18" />
+        <entry key="..\:/Users/USER/AndroidStudioProjects/Kuda/app/src/main/res/layout/fragment_details_project_description.xml" value="0.22" />
+        <entry key="..\:/Users/USER/AndroidStudioProjects/Kuda/app/src/main/res/layout/fragment_details_project_progress.xml" value="0.18" />
         <entry key="..\:/Users/USER/AndroidStudioProjects/Kuda/app/src/main/res/layout/fragment_favourites.xml" value="0.15260416666666668" />
         <entry key="..\:/Users/USER/AndroidStudioProjects/Kuda/app/src/main/res/layout/fragment_history.xml" value="0.25" />
         <entry key="..\:/Users/USER/AndroidStudioProjects/Kuda/app/src/main/res/layout/fragment_projects.xml" value="0.10606060606060606" />
         <entry key="..\:/Users/USER/AndroidStudioProjects/Kuda/app/src/main/res/layout/fragment_user_profile.xml" value="0.15260416666666668" />
-        <entry key="..\:/Users/USER/AndroidStudioProjects/Kuda/app/src/main/res/layout/list_row.xml" value="0.5" />
+        <entry key="..\:/Users/USER/AndroidStudioProjects/Kuda/app/src/main/res/layout/layout_list_item.xml" value="0.3703125" />
+        <entry key="..\:/Users/USER/AndroidStudioProjects/Kuda/app/src/main/res/layout/list_row.xml" value="0.33" />
+        <entry key="..\:/Users/USER/AndroidStudioProjects/Kuda/app/src/main/res/layout/recycler_add_bank.xml" value="0.8076923076923077" />
         <entry key="..\:/Users/USER/AndroidStudioProjects/Kuda/app/src/main/res/layout/recycler_setting.xml" value="0.1" />
         <entry key="..\:/Users/USER/AndroidStudioProjects/Kuda/app/src/main/res/layout/recycler_setting_account.xml" value="0.22" />
         <entry key="..\:/Users/USER/AndroidStudioProjects/Kuda/app/src/main/res/layout/settings_activity.xml" value="0.17447916666666666" />

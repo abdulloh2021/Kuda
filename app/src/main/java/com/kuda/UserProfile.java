@@ -36,7 +36,7 @@ public class UserProfile extends AppCompatActivity {
         BottomNavigationView bottomNavigationView = findViewById(R.id.bottom_navigation);
 
         //Set Home Selected
-//        bottomNavigationView.setSelectedItemId(R.id.home);
+        bottomNavigationView.setSelectedItemId(R.id.profile);
 
         //Perform ItemSelectedListener
         bottomNavigationView.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
@@ -54,17 +54,17 @@ public class UserProfile extends AppCompatActivity {
                         return true;
 
                     case R.id.add:
-                        startActivity(new Intent(getApplicationContext(),Test.class));
+                        startActivity(new Intent(getApplicationContext(),AddProjectActivity.class));
                         overridePendingTransition(android.R.anim.fade_in, android.R.anim.fade_out);
                         return true;
 
-                    case R.id.payment:
-                        startActivity(new Intent(getApplicationContext(),Test.class));
+                    case R.id.setting:
+                        startActivity(new Intent(getApplicationContext(),SettingsActivity.class));
                         overridePendingTransition(android.R.anim.fade_in, android.R.anim.fade_out);
                         return true;
 
                     case R.id.profile:
-                        startActivity(new Intent(getApplicationContext(),Test.class));
+                        startActivity(new Intent(getApplicationContext(),UserProfile.class));
                         overridePendingTransition(android.R.anim.fade_in, android.R.anim.fade_out);
                         return true;
 

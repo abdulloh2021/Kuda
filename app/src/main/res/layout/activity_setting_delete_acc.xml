@@ -53,15 +53,6 @@
         android:textColor="#000000"
         android:textSize="16sp"/>
 
-    <ListView
-        android:id="@+id/deletePoint"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/delDesc"
-        android:background="@drawable/back_grey"
-        android:divider="@null"
-        android:padding="3pt" />
-
     <Button
         android:id="@+id/deleteButt"
         android:layout_width="wrap_content"

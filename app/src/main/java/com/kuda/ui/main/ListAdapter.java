@@ -6,9 +6,11 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.ImageView;
+import android.widget.ProgressBar;
 import android.widget.TextView;
 
 import com.kuda.R;
+import com.kuda.model.Projects;
 
 import java.util.ArrayList;
 
@@ -31,10 +33,26 @@ public class ListAdapter extends ArrayAdapter<Projects> {
         numbersImage.setImageResource(currentNumberPosition.getImageId());
 
         TextView textView1 = currentItemView.findViewById(R.id.projects);
-        textView1.setText(currentNumberPosition.getCreated());
+        textView1.setText(currentNumberPosition.getProjectName());
 
-        TextView textView2 = currentItemView.findViewById(R.id.progress);
-        textView2.setText(currentNumberPosition.getText());
+        TextView tv = currentItemView.findViewById(R.id.statusProgress);
+        tv.setText(currentNumberPosition.getStatus());
+
+        ProgressBar pb = currentItemView.findViewById(R.id.progressBar);
+        pb.setProgress(currentNumberPosition.getDanaMasuk());
+        pb.setMax(currentNumberPosition.getTargetDana());
+
+        if(currentNumberPosition.getDanaMasuk() < currentNumberPosition.getTargetDana()) {
+            pb.setProgressDrawable(getContext().getResources().getDrawable(R.drawable.progress_bar_funding));
+        } else {
+            pb.setProgressDrawable(getContext().getResources().getDrawable(R.drawable.progress_bar_success));
+            tv.setTextColor(getContext().getResources().getColor(R.color.whitey));
+        }
+        if(currentNumberPosition.getLocalDate() > currentNumberPosition.getTenggatWaktu() &&
+            currentNumberPosition.getDanaMasuk() < currentNumberPosition.getTargetDana()) {
+            tv.setTextColor(getContext().getResources().getColor(R.color.whitey));
+            pb.setProgressDrawable(getContext().getResources().getDrawable(R.drawable.progress_bar_failed));
+        }
 
         return currentItemView;
     }

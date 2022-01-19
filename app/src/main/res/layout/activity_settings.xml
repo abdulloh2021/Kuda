@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/back_blue"
     android:orientation="vertical"
     tools:context="com.kuda.SettingsActivity">
 
@@ -26,7 +27,7 @@
         android:gravity="center"
         android:text="Settings"
         android:textColor="#ffff"
-        android:textSize="18sp"
+        android:textSize="33sp"
         android:textStyle="bold" />
 
     <androidx.recyclerview.widget.RecyclerView

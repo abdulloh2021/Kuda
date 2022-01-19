@@ -17,8 +17,8 @@
         android:icon="@drawable/ic_baseline_add"/>
 
     <item
-        android:id="@+id/payment"
-        android:title="Payment"
+        android:id="@+id/setting"
+        android:title="Settings"
         android:icon="@drawable/ic_baseline_payment"/>
 
     <item

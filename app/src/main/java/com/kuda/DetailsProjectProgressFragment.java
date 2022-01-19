@@ -1,4 +1,4 @@
-package com.kuda.ui.main;
+package com.kuda;
 
 import android.os.Bundle;
 
@@ -8,11 +8,9 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-import com.kuda.R;
-
-public class AboutMeFragment extends Fragment   {
+public class DetailsProjectProgressFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        return inflater.inflate(R.layout.fragment_about_me, container, false);
+        return inflater.inflate(R.layout.fragment_details_project_progress, container, false);
     }
 }

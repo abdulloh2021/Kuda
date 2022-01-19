@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+
+        <TextView
+            android:id="@+id/trending_project_title"
+            android:textAlignment="center"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="40dp"
+            android:layout_marginRight="40dp"
+            android:text="trending_project_title"
+
+            android:textSize="30sp"
+            android:textStyle="bold"
+            />
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="40dp"
+            android:layout_marginLeft="40dp"
+
+            android:layout_weight="1">
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <androidx.cardview.widget.CardView
+
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:cardCornerRadius="10dp"
+                android:layout_margin="5dp"
+                android:elevation="10dp">
+
+
+                <ImageView
+
+                    android:id="@+id/trending_project_image"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scaleType="fitXY" />
+
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+
+                    <ImageView
+                        android:layout_margin="12dp"
+                        android:layout_alignParentEnd="true"
+                        android:id="@+id/trending_project_image_univ"
+                        android:layout_width="58dp"
+                        android:layout_height="64dp"
+
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.939"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintVertical_bias="0.025" />
+
+
+
+                    <TextView
+                        android:id="@+id/trending_project_category"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_above="@id/trending_project_goal"
+                        android:layout_gravity="bottom"
+                        android:background="#A0333638"
+                        android:padding="7dp"
+                        android:text="trending_project_category"
+                        android:textColor="@android:color/white"
+                        app:autoSizeMaxTextSize="29sp"
+                        app:autoSizeMinTextSize="12sp"
+                        app:autoSizeStepGranularity="2sp"
+                        app:autoSizeTextType="uniform" />
+
+
+                    <TextView
+                        android:id="@+id/trending_project_goal"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_above="@id/trending_project_progress"
+                        android:text="trending_project_goal"
+                        android:textColor="@color/whitey"
+                        app:autoSizeTextType="uniform"
+                        app:autoSizeMinTextSize="12sp"
+                        app:autoSizeMaxTextSize="29sp"
+                        app:autoSizeStepGranularity="2sp"
+
+                        android:paddingLeft="7dp"
+                        android:paddingRight="7dp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/trending_project_progress"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="trending_project_progress"
+                        app:autoSizeTextType="uniform"
+                        app:autoSizeMinTextSize="12sp"
+                        app:autoSizeMaxTextSize="29sp"
+                        app:autoSizeStepGranularity="2sp"
+                        android:paddingLeft="7dp"
+                        android:paddingRight="7dp"
+                        android:textStyle="italic"
+                        android:textColor="@color/whitey"
+                        android:layout_above="@id/trending_project_description_min"/>
+
+                    <TextView
+                        android:id="@+id/trending_project_description_min"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentBottom="true"
+
+                        android:layout_gravity="bottom"
+                        android:paddingLeft="7dp"
+                        android:paddingRight="7dp"
+                        android:text="trending_project_description_min"
+                        android:textColor="@android:color/white"
+                        app:autoSizeMaxTextSize="29sp"
+                        app:autoSizeMinTextSize="12sp"
+                        app:autoSizeStepGranularity="2sp"
+                        app:autoSizeTextType="uniform" />
+                </RelativeLayout>
+
+
+
+
+            </androidx.cardview.widget.CardView>
+        </RelativeLayout>
+
+
+        </FrameLayout>
+
+
+
+    </LinearLayout>
+
+
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

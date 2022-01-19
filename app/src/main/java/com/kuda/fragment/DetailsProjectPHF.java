@@ -1,4 +1,4 @@
-package com.kuda.ui.main;
+package com.kuda.fragment;
 
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -6,24 +6,22 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
-import androidx.annotation.Nullable;
 import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProvider;
 
-import com.kuda.R;
+import com.kuda.databinding.FragmentDetailsProjectBinding;
 import com.kuda.databinding.FragmentUserProfileBinding;
+import com.kuda.ui.main.PageViewModel;
 
-/**
- * A placeholder fragment containing a simple view.
- */
-public class PlaceholderFragment extends Fragment {
+public class DetailsProjectPHF extends Fragment {
 
     private static final String ARG_SECTION_NUMBER = "section_number";
 
-    private PageViewModel pageViewModel;
-    private FragmentUserProfileBinding binding;
+    private DetailsProjectPVM pageViewModel;
+    private FragmentDetailsProjectBinding binding;
 
     public static PlaceholderFragment newInstance(int index) {
         PlaceholderFragment fragment = new PlaceholderFragment();
@@ -36,7 +34,7 @@ public class PlaceholderFragment extends Fragment {
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        pageViewModel = new ViewModelProvider(this).get(PageViewModel.class);
+        pageViewModel = new ViewModelProvider(this).get(DetailsProjectPVM.class);
         int index = 1;
         if (getArguments() != null) {
             index = getArguments().getInt(ARG_SECTION_NUMBER);
@@ -49,7 +47,7 @@ public class PlaceholderFragment extends Fragment {
             @NonNull LayoutInflater inflater, ViewGroup container,
             Bundle savedInstanceState) {
 
-        binding = FragmentUserProfileBinding.inflate(inflater, container, false);
+        binding = FragmentDetailsProjectBinding.inflate(inflater, container, false);
         View root = binding.getRoot();
 
         final TextView textView = binding.sectionLabel;

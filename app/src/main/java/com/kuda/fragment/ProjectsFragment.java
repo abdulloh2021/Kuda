@@ -1,4 +1,4 @@
-package com.kuda.ui.main;
+package com.kuda.fragment;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -13,7 +13,8 @@ import android.widget.ListView;
 
 import com.kuda.MainActivity;
 import com.kuda.R;
-import com.kuda.UserProfile;
+import com.kuda.model.Projects;
+import com.kuda.ui.main.ListAdapter;
 
 import java.util.ArrayList;
 
@@ -26,9 +27,9 @@ public class ProjectsFragment extends Fragment implements View.OnClickListener {
         homeButton.setOnClickListener(this);
 
         final ArrayList<Projects> arrayList = new ArrayList<Projects>();
-        arrayList.add(new Projects(R.drawable.bulletpoint,"Solar Cell","Funding"));
-        arrayList.add(new Projects(R.drawable.bulletpoint,"Wavepower","Gagal"));
-        arrayList.add(new Projects(R.drawable.bulletpoint,"Math Solar","Success"));
+        arrayList.add(new Projects(R.drawable.bulletpoint,"Solar Cell",100,95,1,7,"Funding Process"));
+        arrayList.add(new Projects(R.drawable.bulletpoint,"Wavepower",100,150,9,7,"Project Success!"));
+        arrayList.add(new Projects(R.drawable.bulletpoint,"Math Solar",100,65,9,7,"Project Gagal Maning"));
 
         ListAdapter adapter = new ListAdapter(getActivity(), arrayList);
         ListView listView = (ListView)view.findViewById(R.id.createdList);

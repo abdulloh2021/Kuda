@@ -5,7 +5,7 @@
     android:layout_height="match_parent"
     android:padding="16sp"
     android:orientation="vertical"
-    tools:context=".ui.main.ProjectsFragment">
+    tools:context=".fragment.ProjectsFragment">
 
     <TextView
         android:id="@+id/projectsText"

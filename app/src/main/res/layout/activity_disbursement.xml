@@ -1,0 +1,249 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/back_blue"
+    android:orientation="vertical"
+    tools:context="com.kuda.DisbursementActivity">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="?attr/colorPrimary"
+        android:minHeight="?attr/actionBarSize" />
+
+    <TextView
+        android:id="@+id/Title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/toolbar"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_centerHorizontal="true"
+        android:gravity="center"
+        android:text="Disbursement"
+        android:textColor="#ffff"
+        android:textSize="33sp"
+        android:textStyle="bold" />
+
+    <ScrollView
+        android:id="@+id/sv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/toolbar">
+
+        <RelativeLayout
+            android:id="@+id/scrollCont"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/toolbar">
+
+            <ImageView
+                android:id="@+id/projectPhoto"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_margin="5pt"
+                android:background="@drawable/john_wick">/</ImageView>
+
+            <TextView
+                android:id="@+id/project_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/projectPhoto"
+                android:layout_centerHorizontal="true"
+                android:gravity="center"
+                android:text="John Wick"
+                android:textColor="@color/navy"
+                android:textSize="25sp"
+                android:textStyle="bold|italic" />
+
+            <RelativeLayout
+                android:id="@+id/cont1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/project_title"
+                android:layout_marginStart="3pt"
+                android:layout_marginTop="3pt"
+                android:layout_marginEnd="3pt"
+                android:layout_marginBottom="3pt"
+                android:orientation="horizontal"
+                android:padding="3pt">
+
+                <TextView
+                    android:id="@+id/idProject"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginStart="3sp"
+                    android:layout_marginTop="3sp"
+                    android:layout_marginEnd="3sp"
+                    android:layout_marginBottom="3sp"
+                    android:text="ID PROJECT"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/idProjectID"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/idProject"
+                    android:layout_marginStart="3sp"
+                    android:layout_marginTop="3sp"
+                    android:layout_marginEnd="3sp"
+                    android:layout_marginBottom="3sp"
+                    android:background="@drawable/border"
+                    android:gravity="center"
+                    android:padding="10sp"
+                    android:text="TECH120122001"
+                    android:textColor="#000000"
+                    android:textSize="25sp" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/cont2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/cont1"
+                android:layout_marginStart="3pt"
+                android:layout_marginTop="3pt"
+                android:layout_marginEnd="3pt"
+                android:layout_marginBottom="3pt"
+                android:orientation="horizontal"
+                android:padding="3pt">
+
+                <TextView
+                    android:id="@+id/totalDana"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginStart="3sp"
+                    android:layout_marginTop="3sp"
+                    android:layout_marginEnd="3sp"
+                    android:layout_marginBottom="3sp"
+                    android:text="TOTAL DANA"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/totalDanaTot"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/totalDana"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginStart="3sp"
+                    android:layout_marginTop="3sp"
+                    android:layout_marginEnd="3sp"
+                    android:layout_marginBottom="3sp"
+                    android:background="@drawable/border"
+                    android:gravity="center"
+                    android:padding="10sp"
+                    android:text="Rp350.000.000,00"
+                    android:textColor="#000000"
+                    android:textSize="25sp" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/cont3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/cont2"
+                android:layout_marginStart="3pt"
+                android:layout_marginTop="3pt"
+                android:layout_marginEnd="3pt"
+                android:layout_marginBottom="3pt"
+                android:orientation="horizontal"
+                android:padding="3pt">
+
+                <TextView
+                    android:id="@+id/namaBank"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginStart="3sp"
+                    android:layout_marginTop="3sp"
+                    android:layout_marginEnd="3sp"
+                    android:layout_marginBottom="3sp"
+                    android:text="NAMA BANK"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+                <Spinner
+                    android:id="@+id/dropdown_bank"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/namaBank"
+                    android:layout_marginStart="3sp"
+                    android:layout_marginTop="3sp"
+                    android:layout_marginEnd="3sp"
+                    android:layout_marginBottom="3sp"
+                    android:background="@drawable/border"
+                    android:gravity="start" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/cont4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/cont3"
+                android:layout_marginStart="3pt"
+                android:layout_marginTop="3pt"
+                android:layout_marginEnd="3pt"
+                android:layout_marginBottom="3pt"
+                android:orientation="horizontal"
+                android:padding="3pt">
+
+                <TextView
+                    android:id="@+id/password"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginStart="3sp"
+                    android:layout_marginTop="3sp"
+                    android:layout_marginEnd="3sp"
+                    android:layout_marginBottom="3sp"
+                    android:text="PASSWORD"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+                <EditText
+                    android:id="@+id/passwordEdit"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/password"
+                    android:layout_marginStart="3sp"
+                    android:layout_marginTop="3sp"
+                    android:layout_marginEnd="3sp"
+                    android:layout_marginBottom="3sp"
+                    android:background="@drawable/border"
+                    android:gravity="center"
+                    android:hint="password"
+                    android:inputType="textPassword"
+                    android:padding="10sp"
+                    android:textColor="#000000"
+                    android:textSize="25sp" />
+            </RelativeLayout>
+
+            <Button
+                android:id="@+id/sendMoney"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/cont4"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="20sp"
+                android:background="@drawable/border"
+                android:onClick="onSendMoney"
+                android:padding="16sp"
+                android:text="SEND ME $$$"
+                android:textColor="@color/bg_tab_text_color" />
+        </RelativeLayout>
+    </ScrollView>
+</RelativeLayout>

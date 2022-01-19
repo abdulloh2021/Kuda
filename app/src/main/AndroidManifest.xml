@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     package="com.kuda">
 
     <application
@@ -10,9 +11,37 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Kuda">
         <activity
+            android:name=".DetailsProjectActivity"
+            android:exported="false" />
+        <activity
+            android:name=".TestCategoryActivity"
+            android:exported="false" />
+        <activity
+            android:name=".DisbursementActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            tools:ignore="LockedOrientationActivity" />
+        <activity
+            android:name=".AddProjectActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            tools:ignore="LockedOrientationActivity" />
+        <activity
+            android:name=".SettingEditProfileActivity"
+            android:exported="false"
+            android:parentActivityName=".SettingsActivity"
+            android:screenOrientation="portrait"
+            tools:ignore="LockedOrientationActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.kuda.LoginActivity" />
+        </activity>
+        <activity
             android:name=".SettingNotificationActivity"
             android:exported="false"
-            android:parentActivityName=".SettingsActivity">
+            android:parentActivityName=".SettingsActivity"
+            android:screenOrientation="portrait"
+            tools:ignore="LockedOrientationActivity">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.kuda.LoginActivity" />
@@ -20,7 +49,9 @@
         <activity
             android:name=".SettingDeleteAccActivity"
             android:exported="false"
-            android:parentActivityName=".SettingsActivity">
+            android:parentActivityName=".SettingsActivity"
+            android:screenOrientation="portrait"
+            tools:ignore="LockedOrientationActivity">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.kuda.LoginActivity" />
@@ -28,18 +59,24 @@
         <activity
             android:name=".SettingAccountActivity"
             android:exported="false"
-            android:parentActivityName=".SettingsActivity">
+            android:parentActivityName=".SettingsActivity"
+            android:screenOrientation="portrait"
+            tools:ignore="LockedOrientationActivity">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.kuda.LoginActivity" />
         </activity>
         <activity
             android:name=".Test"
-            android:exported="false" />
-        <activity
-            android:name=".SettingPaymentActivity"
             android:exported="false"
-            android:parentActivityName=".SettingsActivity">
+            android:screenOrientation="portrait"
+            tools:ignore="LockedOrientationActivity" />
+        <activity
+            android:name=".SettingBankAccountActivity"
+            android:exported="false"
+            android:parentActivityName=".SettingsActivity"
+            android:screenOrientation="portrait"
+            tools:ignore="LockedOrientationActivity">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.kuda.LoginActivity" />
@@ -47,7 +84,9 @@
         <activity
             android:name=".SettingsActivity"
             android:exported="false"
-            android:parentActivityName=".MainActivity">
+            android:parentActivityName=".MainActivity"
+            android:screenOrientation="portrait"
+            tools:ignore="LockedOrientationActivity">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.kuda.MainActivity" />
@@ -55,12 +94,15 @@
         <activity
             android:name=".UserProfile"
             android:exported="false"
-            android:label="@string/title_activity_user_profile"
-            android:theme="@style/Theme.Kuda.NoActionBar" />
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.Kuda.NoActionBar"
+            tools:ignore="LockedOrientationActivity" />
         <activity
             android:name=".SignUpActivity"
             android:exported="false"
-            android:parentActivityName=".LoginActivity">
+            android:parentActivityName=".LoginActivity"
+            android:screenOrientation="portrait"
+            tools:ignore="LockedOrientationActivity">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.kuda.LoginActivity" />
@@ -68,20 +110,29 @@
         <activity
             android:name=".LoginActivity"
             android:exported="false"
-            android:parentActivityName=".MainActivity">
+            android:parentActivityName=".MainActivity"
+            android:screenOrientation="portrait"
+            tools:ignore="LockedOrientationActivity">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.kuda.MainActivity" />
         </activity>
         <activity
             android:name=".MainActivity"
-            android:exported="true">
+            android:exported="true"
+            android:screenOrientation="portrait"
+            tools:ignore="LockedOrientationActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
+                <category android:name="android.intent.category.DEFAULT" />
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+        <meta-data
+            android:name="preloaded_fonts"
+            android:resource="@array/preloaded_fonts" />
     </application>
 
 </manifest>

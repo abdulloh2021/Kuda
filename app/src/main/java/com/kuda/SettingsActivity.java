@@ -7,7 +7,6 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.view.MenuItem;
 import android.view.View;
 import android.widget.Toast;
 
@@ -31,8 +30,7 @@ public class SettingsActivity extends AppCompatActivity implements RecyclerAdapt
         arraySetting.add("Account");
         arraySetting.add("Edit Profile");
         arraySetting.add("Notifications");
-        arraySetting.add("Payment");
-        arraySetting.add("Withdrawal");
+        arraySetting.add("Bank Account");
         arraySetting.add("Delete Account");
 
         RecyclerView recyclerView = findViewById(R.id.rvSetting);
@@ -51,20 +49,18 @@ public class SettingsActivity extends AppCompatActivity implements RecyclerAdapt
                 startActivity(intent);
                 break;
             case 1:
-                Toast.makeText(this, "You clicked " + adapter.getItem(position) + " on row number " + (position), Toast.LENGTH_SHORT).show();
+                intent = new Intent(this, SettingEditProfileActivity.class);
+                startActivity(intent);
                 break;
             case 2:
                 intent = new Intent(this, SettingNotificationActivity.class);
                 startActivity(intent);
                 break;
             case 3:
-                intent = new Intent(this, SettingPaymentActivity.class);
+                intent = new Intent(this, SettingBankAccountActivity.class);
                 startActivity(intent);
                 break;
             case 4:
-                Toast.makeText(this, "You clicked " + adapter.getItem(position) + " on row number " + (position), Toast.LENGTH_SHORT).show();
-                break;
-            case 5:
                 intent = new Intent(this, SettingDeleteAccActivity.class);
                 startActivity(intent);
                 break;

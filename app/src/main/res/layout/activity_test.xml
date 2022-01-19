@@ -4,13 +4,39 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/back_blue"
     tools:context=".Test">
+
+    <RelativeLayout
+        android:id="@+id/cont1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ProgressBar
+            android:id="@+id/progressBar"
+            style="?android:attr/progressBarStyleHorizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:layout_margin="5pt" />
+
+        <TextView
+            android:id="@+id/statusProgress"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:padding="1sp"
+            android:textStyle="bold"
+            android:textSize="14sp"/>
+
+    </RelativeLayout>
 
     <LinearLayout
         android:id="@+id/layout_bawah"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-
         android:layout_alignParentBottom="true"
         android:background="#BAEFFA">
 
