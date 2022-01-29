@@ -1,4 +1,4 @@
-package com.kuda.ui.main;
+package com.kuda.adapter;
 
 import android.content.Context;
 import android.view.LayoutInflater;

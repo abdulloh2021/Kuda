@@ -1,4 +1,4 @@
-package com.kuda.ui.main;
+package com.kuda.adapter;
 
 import android.content.Context;
 import android.view.LayoutInflater;
@@ -30,7 +30,7 @@ public class ListAdapter extends ArrayAdapter<Projects> {
 
         ImageView numbersImage = currentItemView.findViewById(R.id.bullet);
         assert currentNumberPosition != null;
-        numbersImage.setImageResource(currentNumberPosition.getImageId());
+        numbersImage.setImageResource(currentNumberPosition.getBulletId());
 
         TextView textView1 = currentItemView.findViewById(R.id.projects);
         textView1.setText(currentNumberPosition.getProjectName());

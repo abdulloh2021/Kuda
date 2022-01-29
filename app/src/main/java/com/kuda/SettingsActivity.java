@@ -8,9 +8,8 @@ import androidx.recyclerview.widget.RecyclerView;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.Toast;
 
-import com.kuda.ui.main.RecyclerAdapter;
+import com.kuda.adapter.RecyclerAdapter;
 
 import java.util.ArrayList;
 
@@ -32,6 +31,7 @@ public class SettingsActivity extends AppCompatActivity implements RecyclerAdapt
         arraySetting.add("Notifications");
         arraySetting.add("Bank Account");
         arraySetting.add("Delete Account");
+        arraySetting.add("Log In");
 
         RecyclerView recyclerView = findViewById(R.id.rvSetting);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
@@ -62,6 +62,10 @@ public class SettingsActivity extends AppCompatActivity implements RecyclerAdapt
                 break;
             case 4:
                 intent = new Intent(this, SettingDeleteAccActivity.class);
+                startActivity(intent);
+                break;
+            case 5:
+                intent = new Intent(this, LoginActivity.class);
                 startActivity(intent);
                 break;
         }

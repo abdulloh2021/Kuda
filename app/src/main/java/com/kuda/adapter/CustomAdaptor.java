@@ -1,8 +1,10 @@
-package com.kuda.ui.main;
-
+package com.kuda.adapter;
 
 import android.annotation.SuppressLint;
 import android.content.Context;
+import android.content.Intent;
+import android.graphics.Bitmap;
+import android.graphics.drawable.BitmapDrawable;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -14,9 +16,12 @@ import androidx.annotation.NonNull;
 import androidx.cardview.widget.CardView;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.kuda.DetailsProjectActivity;
 import com.kuda.R;
+import com.kuda.SecondScreen;
 import com.kuda.model.RecommendProject;
 
+import java.io.ByteArrayOutputStream;
 import java.util.List;
 
 public class CustomAdaptor extends RecyclerView.Adapter<CustomAdaptor.RecommendProjectHolder> {
@@ -49,7 +54,6 @@ public class CustomAdaptor extends RecyclerView.Adapter<CustomAdaptor.RecommendP
     public RecommendProjectHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         View v = LayoutInflater.from(context).inflate(R.layout.layout_list_item,parent,false);
 
-
         return new RecommendProjectHolder(v);
     }
 
@@ -58,13 +62,35 @@ public class CustomAdaptor extends RecyclerView.Adapter<CustomAdaptor.RecommendP
 
         RecommendProject recommendProject = recommendProjects.get(position);
 
-        holder.titleProject.setText(recommendProject.getName());
-        holder.goalProject.setText(recommendProject.getSize()+" %");
+        holder.titleProject.setText(recommendProject.getRecommend_project_title());
+        holder.goalProject.setText(recommendProject.getRecommend_project_goal()+" %");
         holder.imageProject.setImageResource(recommendProject.getImage());
         holder.cardView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Toast.makeText(context,""+recommendProject.getName(),Toast.LENGTH_SHORT).show();
+                ImageView recommend_project_image = (ImageView) view.findViewById(R.id.image_project);
+                recommend_project_image.setImageResource(recommendProject.getImage());
+
+                Bitmap bmp = ((BitmapDrawable) recommend_project_image.getDrawable()).getBitmap();
+
+                ByteArrayOutputStream stream = new ByteArrayOutputStream();
+                bmp.compress(Bitmap.CompressFormat.PNG, 100, stream);
+                byte[] byteArray = stream.toByteArray();
+
+                String tpTitle = recommendProject.getRecommend_project_title();
+                String tpCategory = recommendProject.getRecommend_project_category();
+                String tpGoal = recommendProject.getRecommend_project_goal();
+                String tpProgress = recommendProject.getRecommend_project_progress();
+
+                Intent intentSecondActivity=new Intent(context, DetailsProjectActivity.class);
+                intentSecondActivity.putExtra("tpTitle", tpTitle);
+                intentSecondActivity.putExtra("tpCategory", tpCategory);
+                intentSecondActivity.putExtra("tpGoal", tpGoal);
+                intentSecondActivity.putExtra("tpProgress", tpProgress);
+                intentSecondActivity.putExtra("image",byteArray);
+
+                context.startActivity(intentSecondActivity);
+
             }
         });
 

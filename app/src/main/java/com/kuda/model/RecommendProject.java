@@ -8,7 +8,6 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 @AllArgsConstructor
 public class RecommendProject {
-    int image;
-    String name;
-    int size;
+    private String recommend_project_title,recommend_project_category,recommend_project_description_min,recommend_project_goal,recommend_project_progress;
+    private int image,image_univ;
 }

@@ -13,8 +13,6 @@ import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProvider;
 
 import com.kuda.databinding.FragmentDetailsProjectBinding;
-import com.kuda.databinding.FragmentUserProfileBinding;
-import com.kuda.ui.main.PageViewModel;
 
 public class DetailsProjectPHF extends Fragment {
 

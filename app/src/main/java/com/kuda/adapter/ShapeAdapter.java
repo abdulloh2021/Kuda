@@ -1,4 +1,4 @@
-package com.kuda;
+package com.kuda.adapter;
 
 import android.content.Context;
 import android.view.LayoutInflater;
@@ -8,6 +8,7 @@ import android.widget.ArrayAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.kuda.R;
 import com.kuda.model.Shape;
 
 import java.util.List;

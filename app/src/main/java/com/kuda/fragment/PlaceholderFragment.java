@@ -13,7 +13,7 @@ import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProvider;
 
 import com.kuda.databinding.FragmentUserProfileBinding;
-import com.kuda.ui.main.PageViewModel;
+import com.kuda.adapter.PageViewModel;
 
 public class PlaceholderFragment extends Fragment {
 

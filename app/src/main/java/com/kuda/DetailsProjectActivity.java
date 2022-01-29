@@ -4,19 +4,20 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 import androidx.viewpager.widget.ViewPager;
 
-import android.graphics.Color;
+import android.content.Intent;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
 import android.os.Bundle;
 import android.text.method.LinkMovementMethod;
 import android.view.MenuItem;
-import android.view.TextureView;
+import android.view.View;
+import android.widget.ImageView;
 import android.widget.ProgressBar;
 import android.widget.TextView;
 
 import com.google.android.material.tabs.TabLayout;
 import com.kuda.databinding.ActivityDetailsProjectBinding;
-import com.kuda.databinding.ActivityUserProfileBinding;
 import com.kuda.fragment.DetailsProjectSectionAdapter;
-import com.kuda.ui.main.SectionsPagerAdapter;
 
 public class DetailsProjectActivity extends AppCompatActivity {
 
@@ -44,7 +45,7 @@ public class DetailsProjectActivity extends AppCompatActivity {
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbarDet);
         setSupportActionBar(toolbar);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-        getSupportActionBar().setDisplayShowTitleEnabled(true);
+        getSupportActionBar().setDisplayShowTitleEnabled(false);
 
         TextView linkFAQ = findViewById(R.id.faq);
         linkFAQ.setMovementMethod(LinkMovementMethod.getInstance());
@@ -82,9 +83,40 @@ public class DetailsProjectActivity extends AppCompatActivity {
         pb.setMax(targetDana);
     }
 
+    private void setValues() {
+        byte[] byteArray = getIntent().getByteArrayExtra("image");
+        Bitmap bmp = BitmapFactory.decodeByteArray(byteArray, 0, byteArray.length);
+
+        // get the text from MainActivity
+        Intent intent = getIntent();
+        String trendingProjectTitle = intent.getStringExtra("tpTitle");
+        String trendingProjectCategory = intent.getStringExtra("tpCategory");
+        String trendingProjectGoal = intent.getStringExtra("tpGoal");
+        String trendingProjectProgress = intent.getStringExtra("tpProgress");
+
+        // use the text in a TextView
+        TextView tvTitle = (TextView) findViewById(R.id.tvTitle);
+        TextView tvCategory = (TextView) findViewById(R.id.tvCategory);
+        TextView tvGoal = (TextView) findViewById(R.id.tvGoal);
+        TextView tvProgress = (TextView) findViewById(R.id.tvProgress);
+        ImageView ivImage1 = (ImageView) findViewById(R.id.iv);
+
+        tvTitle.setText(trendingProjectTitle);
+        tvCategory.setText(trendingProjectCategory);
+        tvGoal.setText(trendingProjectGoal);
+        tvProgress.setText(trendingProjectProgress);
+        ivImage1.setImageBitmap(bmp);
+
+    }
+
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         onBackPressed();
         return true;
+    }
+
+    public void toPayment(View view) {
+        Intent intent = new Intent(this, LoginActivity.class);
+        startActivity(intent);
     }
 }

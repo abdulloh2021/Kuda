@@ -1,6 +1,5 @@
 package com.kuda;
 
-import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.MenuItem;
@@ -12,7 +11,7 @@ import androidx.annotation.NonNull;
 import androidx.viewpager.widget.ViewPager;
 import androidx.appcompat.app.AppCompatActivity;
 
-import com.kuda.ui.main.SectionsPagerAdapter;
+import com.kuda.adapter.SectionsPagerAdapter;
 import com.kuda.databinding.ActivityUserProfileBinding;
 
 public class UserProfile extends AppCompatActivity {

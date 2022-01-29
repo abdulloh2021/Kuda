@@ -1,9 +1,12 @@
 package com.kuda;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.content.ContextCompat;
+
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.Button;
@@ -11,15 +14,16 @@ import android.widget.LinearLayout;
 import android.widget.ListView;
 import android.widget.SearchView;
 
-import com.kuda.adapter.ShapeAdapter;
-import com.kuda.model.Shape;
+import com.google.android.material.bottomnavigation.BottomNavigationView;
+import com.kuda.adapter.ProjectAdapter;
+import com.kuda.model.Projects;
 
 import java.util.ArrayList;
 import java.util.Collections;
 
-public class TestCategoryActivity extends AppCompatActivity {
-    public static ArrayList<Shape> shapeList = new ArrayList<Shape>();
+public class SearchActivity extends AppCompatActivity {
 
+    public static ArrayList<Projects> projectList = new ArrayList<Projects>();
     private ListView listView;
     private Button sortButton;
     private Button filterButton;
@@ -43,7 +47,7 @@ public class TestCategoryActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState)
     {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_test_category);
+        setContentView(R.layout.activity_search);
 
         initSearchWidgets();
         initWidgets();
@@ -56,15 +60,58 @@ public class TestCategoryActivity extends AppCompatActivity {
         lookSelected(idAscButton);
         lookSelected(allButton);
         selectedFilters.add("all");
+
+        //=========================================== navigation control ===========================================
+
+        //Initialize And Assign Variable
+        BottomNavigationView bottomNavigationView = findViewById(R.id.bottom_navigation);
+
+        //Set Home Selected
+        bottomNavigationView.setSelectedItemId(R.id.search);
+
+        //Perform ItemSelectedListener
+        bottomNavigationView.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
+            @Override
+            public boolean onNavigationItemSelected(@NonNull MenuItem item) {
+                switch (item.getItemId()){
+                    case R.id.home:
+                        startActivity(new Intent(getApplicationContext(),MainActivity.class));
+                        overridePendingTransition(android.R.anim.fade_in, android.R.anim.fade_out);
+                        return true;
+
+                    case R.id.search:
+
+                        return true;
+
+                    case R.id.add:
+                        startActivity(new Intent(getApplicationContext(),AddProjectActivity.class));
+                        overridePendingTransition(android.R.anim.fade_in, android.R.anim.fade_out);
+                        return true;
+
+                    case R.id.setting:
+                        startActivity(new Intent(getApplicationContext(),SettingsActivity.class));
+                        overridePendingTransition(android.R.anim.fade_in, android.R.anim.fade_out);
+                        return true;
+
+                    case R.id.profile:
+                        startActivity(new Intent(getApplicationContext(), UserProfile.class));
+                        overridePendingTransition(android.R.anim.fade_in, android.R.anim.fade_out);
+                        return true;
+
+                }
+                return false;
+            }
+        });
+        //=========================================== end navigation control ===========================================
+
     }
 
     private void initColors()
     {
-        white = ContextCompat.getColor(getApplicationContext(), R.color.birtu);
-        red = ContextCompat.getColor(getApplicationContext(), R.color.whitey);
-        darkGray = ContextCompat.getColor(getApplicationContext(), R.color.birtu);
+        white = ContextCompat.getColor(getApplicationContext(), R.color.whitey);
+        red = ContextCompat.getColor(getApplicationContext(), R.color.navy);
+        darkGray = ContextCompat.getColor(getApplicationContext(), R.color.abu);
     }
-
 
     private void unSelectAllSortButtons()
     {
@@ -104,11 +151,11 @@ public class TestCategoryActivity extends AppCompatActivity {
         filterView2 = (LinearLayout) findViewById(R.id.filterTabsLayout2);
         sortView = (LinearLayout) findViewById(R.id.sortTabsLayout2);
 
-        circleButton = (Button) findViewById(R.id.circleFilter);
-        squareButton = (Button) findViewById(R.id.squareFilter);
-        rectangleButton = (Button) findViewById(R.id.rectangleFilter);
-        triangleButton  = (Button) findViewById(R.id.triangleFilter);
-        octagonButton  = (Button) findViewById(R.id.octagonFilter);
+        circleButton = (Button) findViewById(R.id.kesehatanFilter);
+        squareButton = (Button) findViewById(R.id.pertanianFilter);
+        rectangleButton = (Button) findViewById(R.id.perkebunanFilter);
+        triangleButton  = (Button) findViewById(R.id.teknologiFilter);
+        octagonButton  = (Button) findViewById(R.id.iotFilter);
         allButton  = (Button) findViewById(R.id.allFilter);
 
         idAscButton  = (Button) findViewById(R.id.idAsc);
@@ -119,7 +166,7 @@ public class TestCategoryActivity extends AppCompatActivity {
 
     private void initSearchWidgets()
     {
-        searchView = (SearchView) findViewById(R.id.shapeListSearchView);
+        searchView = (SearchView) findViewById(R.id.projectListSearchView);
 
         searchView.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
             @Override
@@ -131,29 +178,29 @@ public class TestCategoryActivity extends AppCompatActivity {
             public boolean onQueryTextChange(String s)
             {
                 currentSearchText = s;
-                ArrayList<Shape> filteredShapes = new ArrayList<Shape>();
+                ArrayList<Projects> filteredProjects = new ArrayList<Projects>();
 
-                for(Shape shape: shapeList)
+                for(Projects project: projectList)
                 {
-                    if(shape.getName().toLowerCase().contains(s.toLowerCase()))
+                    if(project.getProjectName().toLowerCase().contains(s.toLowerCase()))
                     {
                         if(selectedFilters.contains("all"))
                         {
-                            filteredShapes.add(shape);
+                            filteredProjects.add(project);
                         }
                         else
                         {
                             for(String filter: selectedFilters)
                             {
-                                if (shape.getName().toLowerCase().contains(filter))
+                                if (project.getProjectName().toLowerCase().contains(filter))
                                 {
-                                    filteredShapes.add(shape);
+                                    filteredProjects.add(project);
                                 }
                             }
                         }
                     }
                 }
-                setAdapter(filteredShapes);
+                setAdapter(filteredProjects);
 
                 return false;
             }
@@ -162,42 +209,16 @@ public class TestCategoryActivity extends AppCompatActivity {
 
     private void setupData()
     {
-        Shape circle = new Shape("0", "Circle", R.drawable.aquaman);
-        shapeList.add(circle);
+        projectList.add(new Projects(R.drawable.bulletpoint,"Solar Cell",100,95,1,7,
+            "Funding Process","Technology","TECH1021205654",R.drawable.bumblebee,R.drawable.logo_univ_ipb));
+        projectList.add(new Projects(R.drawable.bulletpoint,"Wavepower",100,150,9,7,
+            "Project Success!","Technology","TECH1021205654",R.drawable.john_wick,R.drawable.logo_univ_ipb));
 
-        Shape triangle = new Shape("1","Triangle", R.drawable.aquaman);
-        shapeList.add(triangle);
-
-        Shape square = new Shape("2","Square", R.drawable.aquaman);
-        shapeList.add(square);
-
-        Shape rectangle = new Shape("3","Rectangle", R.drawable.aquaman);
-        shapeList.add(rectangle);
-
-        Shape octagon = new Shape("4","Octagon", R.drawable.aquaman);
-        shapeList.add(octagon);
-
-        Shape circle2 = new Shape("5", "Circle 2", R.drawable.aquaman);
-        shapeList.add(circle2);
-
-        Shape triangle2 = new Shape("6","Triangle 2", R.drawable.aquaman);
-        shapeList.add(triangle2);
-
-        Shape square2 = new Shape("7","Square 2", R.drawable.aquaman);
-        shapeList.add(square2);
-
-        Shape rectangle2 = new Shape("8","Rectangle 2", R.drawable.aquaman);
-        shapeList.add(rectangle2);
-
-        Shape octagon2 = new Shape("9","Octagon 2", R.drawable.aquaman);
-        shapeList.add(octagon2);
     }
-
     private void setUpList()
     {
-        listView = (ListView) findViewById(R.id.shapesListView);
-
-        setAdapter(shapeList);
+        listView = (ListView) findViewById(R.id.projectsListView);
+        setAdapter(projectList);
     }
 
     private void setUpOnclickListener()
@@ -206,50 +227,45 @@ public class TestCategoryActivity extends AppCompatActivity {
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int position, long l)
             {
-                Shape selectShape = (Shape) (listView.getItemAtPosition(position));
-                Intent showDetail = new Intent(getApplicationContext(), TestCategoryDetails.class);
-                showDetail.putExtra("id",selectShape.getId());
+                Projects selectProject = (Projects) (listView.getItemAtPosition(position));
+                Intent showDetail = new Intent(getApplicationContext(), DetailsProjectActivity.class);
+                showDetail.putExtra("id",selectProject.getId());
                 startActivity(showDetail);
             }
         });
 
     }
 
-
-
     private void filterList(String status)
     {
         if(status != null && !selectedFilters.contains(status))
             selectedFilters.add(status);
 
-        ArrayList<Shape> filteredShapes = new ArrayList<Shape>();
+        ArrayList<Projects> filteredProjects = new ArrayList<Projects>();
 
-        for(Shape shape: shapeList)
+        for(Projects project: projectList)
         {
             for(String filter: selectedFilters)
             {
-                if(shape.getName().toLowerCase().contains(filter))
+                if(project.getCategory().toLowerCase().contains(filter))
                 {
                     if(currentSearchText == "")
                     {
-                        filteredShapes.add(shape);
+                        filteredProjects.add(project);
                     }
                     else
                     {
-                        if(shape.getName().toLowerCase().contains(currentSearchText.toLowerCase()))
+                        if(project.getCategory().toLowerCase().contains(currentSearchText.toLowerCase()))
                         {
-                            filteredShapes.add(shape);
+                            filteredProjects.add(project);
                         }
                     }
                 }
             }
         }
 
-        setAdapter(filteredShapes);
+        setAdapter(filteredProjects);
     }
-
-
-
 
     public void allFilterTapped(View view)
     {
@@ -258,45 +274,43 @@ public class TestCategoryActivity extends AppCompatActivity {
 
         unSelectAllFilterButtons();
         lookSelected(allButton);
-
-        setAdapter(shapeList);
+        setAdapter(projectList);
     }
 
-    public void triangleFilterTapped(View view)
+    public void teknologiFilterTapped(View view)
     {
-        filterList("triangle");
+        filterList("teknologi");
         lookSelected(triangleButton);
         lookUnSelected(allButton);
     }
 
-    public void squareFilterTapped(View view)
+    public void pertanianFilterTapped(View view)
     {
-        filterList("square");
+        filterList("pertanian");
         lookSelected(squareButton);
         lookUnSelected(allButton);
     }
 
-    public void octagonFilterTapped(View view)
+    public void iotFilterTapped(View view)
     {
-        filterList("octagon");
+        filterList("iot");
         lookSelected(octagonButton);
         lookUnSelected(allButton);
     }
 
-    public void rectangleFilterTapped(View view)
+    public void perkebunanFilterTapped(View view)
     {
-        filterList("rectangle");
+        filterList("perkebunan");
         lookSelected(rectangleButton);
         lookUnSelected(allButton);
     }
 
-    public void circleFilterTapped(View view)
+    public void kesehatanFilterTapped(View view)
     {
-        filterList("circle");
+        filterList("kesehatan");
         lookSelected(circleButton);
         lookUnSelected(allButton);
     }
-
 
     public void showFilterTapped(View view)
     {
@@ -326,11 +340,9 @@ public class TestCategoryActivity extends AppCompatActivity {
         }
     }
 
-
-
     private void hideFilter()
     {
-        searchView.setVisibility(View.GONE);
+
         filterView1.setVisibility(View.GONE);
         filterView2.setVisibility(View.GONE);
         filterButton.setText("FILTER");
@@ -338,7 +350,7 @@ public class TestCategoryActivity extends AppCompatActivity {
 
     private void showFilter()
     {
-        searchView.setVisibility(View.VISIBLE);
+
         filterView1.setVisibility(View.VISIBLE);
         filterView2.setVisibility(View.VISIBLE);
         filterButton.setText("HIDE");
@@ -358,7 +370,7 @@ public class TestCategoryActivity extends AppCompatActivity {
 
     public void idASCTapped(View view)
     {
-        Collections.sort(shapeList, Shape.idAscending);
+        Collections.sort(projectList, Projects.idAscending);
         checkForFilter();
         unSelectAllSortButtons();
         lookSelected(idAscButton);
@@ -366,8 +378,8 @@ public class TestCategoryActivity extends AppCompatActivity {
 
     public void idDESCTapped(View view)
     {
-        Collections.sort(shapeList, Shape.idAscending);
-        Collections.reverse(shapeList);
+        Collections.sort(projectList, Projects.idAscending);
+        Collections.reverse(projectList);
         checkForFilter();
         unSelectAllSortButtons();
         lookSelected(idDescButton);
@@ -375,7 +387,7 @@ public class TestCategoryActivity extends AppCompatActivity {
 
     public void nameASCTapped(View view)
     {
-        Collections.sort(shapeList, Shape.nameAscending);
+        Collections.sort(projectList, Projects.nameAscending);
         checkForFilter();
         unSelectAllSortButtons();
         lookSelected(nameAscButton);
@@ -383,8 +395,8 @@ public class TestCategoryActivity extends AppCompatActivity {
 
     public void nameDESCTapped(View view)
     {
-        Collections.sort(shapeList, Shape.nameAscending);
-        Collections.reverse(shapeList);
+        Collections.sort(projectList, Projects.nameAscending);
+        Collections.reverse(projectList);
         checkForFilter();
         unSelectAllSortButtons();
         lookSelected(nameDescButton);
@@ -396,19 +408,19 @@ public class TestCategoryActivity extends AppCompatActivity {
         {
             if(currentSearchText.equals(""))
             {
-                setAdapter(shapeList);
+                setAdapter(projectList);
             }
             else
             {
-                ArrayList<Shape> filteredShapes = new ArrayList<Shape>();
-                for(Shape shape: shapeList)
+                ArrayList<Projects> filteredProjects = new ArrayList<Projects>();
+                for(Projects project: projectList)
                 {
-                    if(shape.getName().toLowerCase().contains(currentSearchText))
+                    if(project.getCategory().toLowerCase().contains(currentSearchText))
                     {
-                        filteredShapes.add(shape);
+                        filteredProjects.add(project);
                     }
                 }
-                setAdapter(filteredShapes);
+                setAdapter(filteredProjects);
             }
         }
         else
@@ -417,9 +429,10 @@ public class TestCategoryActivity extends AppCompatActivity {
         }
     }
 
-    private void setAdapter(ArrayList<Shape> shapeList)
+    private void setAdapter(ArrayList<Projects> projectList)
     {
-        ShapeAdapter adapter = new ShapeAdapter(getApplicationContext(), 0, shapeList);
+        ProjectAdapter adapter = new ProjectAdapter(getApplicationContext(), 0, projectList);
         listView.setAdapter(adapter);
     }
+
 }

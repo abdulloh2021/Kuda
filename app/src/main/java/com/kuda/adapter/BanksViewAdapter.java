@@ -1,4 +1,4 @@
-package com.kuda;
+package com.kuda.adapter;
 
 import android.app.AlertDialog;
 import android.content.Context;
@@ -10,6 +10,9 @@ import android.widget.ArrayAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
+
+import com.kuda.BanksView;
+import com.kuda.R;
 
 import java.util.ArrayList;
 

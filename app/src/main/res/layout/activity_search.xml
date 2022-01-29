@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <SearchView
+            android:id="@+id/projectListSearchView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/whitey"
+            android:iconifiedByDefault="false"
+            android:queryHint="Shape Name"></SearchView>
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/tabatas"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_below="@+id/projectListSearchView"
+            android:background="@color/abu">
+
+            <Button
+                android:id="@+id/sortButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="showSortTapped"
+                android:text="SORT"
+                android:textColor="@color/navy"
+                android:textSize="15sp" />
+
+            <Button
+                android:id="@+id/filterButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end"
+                android:layout_marginRight="5dp"
+                android:onClick="showFilterTapped"
+                android:text="FILTER"
+                android:textColor="@color/navy"
+                android:textSize="15sp" />
+
+        </androidx.appcompat.widget.Toolbar>
+
+        <LinearLayout
+            android:id="@+id/filterTabsLayout"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_below="@+id/tabatas"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/allFilter"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@color/whitey"
+                android:onClick="allFilterTapped"
+                android:text="All"
+                android:textColor="@color/navy" />
+
+            <Button
+                android:id="@+id/teknologiFilter"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@color/whitey"
+                android:onClick="teknologiFilterTapped"
+                android:text="Teknologi"
+                android:textColor="@color/navy" />
+
+            <Button
+                android:id="@+id/pertanianFilter"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@color/whitey"
+                android:onClick="pertanianFilterTapped"
+                android:text="Pertanian"
+                android:textColor="@color/navy" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/filterTabsLayout2"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_below="@+id/filterTabsLayout"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/iotFilter"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@color/whitey"
+                android:onClick="iotFilterTapped"
+                android:text="IoT"
+                android:textColor="@color/navy" />
+
+            <Button
+                android:id="@+id/perkebunanFilter"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@color/whitey"
+                android:onClick="perkebunanFilterTapped"
+                android:text="Perkebunan"
+                android:textColor="@color/navy" />
+
+            <Button
+                android:id="@+id/kesehatanFilter"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@color/whitey"
+                android:onClick="kesehatanFilterTapped"
+                android:text="Kesehatan"
+                android:textColor="@color/navy" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/sortTabsLayout2"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_below="@+id/filterTabsLayout2"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/idAsc"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@color/abu"
+                android:onClick="idASCTapped"
+                android:text="ID ASC"
+                android:textSize="10dp" />
+
+            <Button
+                android:id="@+id/idDesc"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@color/abu"
+                android:onClick="idDESCTapped"
+                android:text="ID DESC"
+                android:textSize="10dp" />
+
+            <Button
+                android:id="@+id/nameAsc"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@color/abu"
+                android:onClick="nameASCTapped"
+                android:text="NAME ASC"
+                android:textSize="10dp" />
+
+            <Button
+                android:id="@+id/nameDesc"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@color/abu"
+                android:onClick="nameDESCTapped"
+                android:text="NAME DESC"
+                android:textSize="10dp" />
+
+        </LinearLayout>
+
+        <ListView
+            android:id="@+id/projectsListView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/sortTabsLayout2" />
+
+        <LinearLayout
+            android:id="@+id/layout_bawah"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:background="#BAEFFA">
+
+            <com.google.android.material.bottomnavigation.BottomNavigationView
+                android:id="@+id/bottom_navigation"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_alignParentBottom="true"
+                app:itemBackground="@color/back_bot_nav"
+                app:itemIconTint="@drawable/selector"
+                app:itemTextColor="@drawable/selector"
+                app:menu="@menu/menu_navigation" />
+        </LinearLayout>
+    </RelativeLayout>
+</LinearLayout>

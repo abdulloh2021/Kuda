@@ -17,7 +17,7 @@
     <string name="add_project">Create your project</string>
     <string name="pro_name">Project Name</string>
     <string name="pro_upload_pic">Upload Picture/ Video</string>
-    <string name="select_pic">Select Picture /Video (.jpg/.png/.mp4)</string>
+    <string name="select_pic">Select Picture(.jpg/.png)</string>
     <string name="btn_pic">Submit</string>
     <string name="upload">upload</string>
     <string name="portofolio_upload">Upload Portofolio</string>
@@ -53,4 +53,7 @@
     <string name="faq"><a href="https://en.wikipedia.org/wiki/FAQ">FAQ</a></string>
     <string name="tou"><a href="https://www.termsfeed.com/blog/sample-terms-of-use-template/">Terms of Use</a></string>
     <string name="privacy"><a href="https://twitter.com/en/privacy">Privacy Policy</a></string>
+    <string name="title_activity_forgot_password">ForgotPasswordActivity</string>
+    <string name="userMail">Tessy@WRH.id</string>
+
 </resources>
